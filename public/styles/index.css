@@ -1,6 +1,40 @@
+.navbar {
+	background-color: navajowhite;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	font-family: courier;
+	font-size: 18px;
+}
+
+.navbar h1 {
+	display: flex;
+	justify-content: center;
+}
+
+.navbar ul {
+	display: flex;
+	justify-content: space-between;
+}
+
+.navbar li {
+	display: inline-block;
+	padding: 10px 30px;
+}
+
+.navbar li:hover {
+	color: navajowhite;
+	background-color: aqua;
+	transition: 0.3s ease;
+}
+
+.navbar a {
+	text-decoration: none;
+}
+
 .banner {
 	background-color: mediumaquamarine;
-	margin-top: 75px;
+	margin-top: 150px;
 	text-align: center;
 	padding: 50px 0;
 }
@@ -17,4 +51,8 @@
 	padding: 10px 10px;
 	font-family: futura;
 	font-style: italic;
+}
+
+#more-text {
+	color: darkslateblue;
 }

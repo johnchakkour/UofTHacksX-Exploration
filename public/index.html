@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!-- Meta Information -->
   <meta charset="utf-8">
@@ -7,41 +8,53 @@
   <title>GoHere</title>
 
   <!-- External CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- External font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+    rel="stylesheet">
+
 
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/index.css" type="text/css" />
 
   <!-- External JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js" defer></script>
 </head>
 
 <body>
-  <!-- Banner section -->
-  <div class="banner">
+  <!-- Navbar section -->
+  <nav class="navbar">
     <h1>Welcome to GoHere</h1>
-    <img id="small-marker" src="./resources/images/map_marker.png" alt="">
-    <p>This is our project for UofTHacks X</p>
-    <button>Our GitHub page</button>
+    <ul>
+      <li id="write-new-event">make event</li>
+      <li id="filter-events">filter</li>
+      <li id="search-events">search</li>
+      <li id="log-in">log-in</li>
+    </ul>
+  </nav>
+
+  <!-- Map section -->
+  <div class="banner">
+    <h1>This is where our map will be</h1>
   </div>
 
-  <!-- Another section -->
-  <h1 id="bla">GoHere</h1>
-  <p>More text more text</p>
-  <form action="">
-    <input type="text"/>
-    <input type="submit" value="Submit"/>
-  </form>
-  <div>
-    <ul>
-      <li>
-        <div></div><span>Even more text</span>
-      </li>
-      <li>
-        <div></div><span>And even more text</span>
-      </li>
-    </ul>
-  </div>
+  <!-- New event form -->
+  <form id="new-event"></form>
+  <form id="filter"></form>
+  <form id="search"></form>
+  <form id="log-in-form"></form>
 </body>
+
 </html>
