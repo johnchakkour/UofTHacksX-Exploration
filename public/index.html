@@ -13,6 +13,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded&display=swap" rel="stylesheet">
 
   <!-- External font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,30 +37,38 @@
 </head>
 
 <body>
-  <!-- Navbar section -->
-  <nav class="navbar">
-    <h1>Welcome to GoHere</h1>
-    <ul>
-      <li id="write-new-event">make event</li>
-      <li id="filter-events">filter</li>
-      <li id="search-events">search</li>
-      <li id="log-in">log-in</li>
-    </ul>
-  </nav>
+   
+    <!-- Navbar section -->
+    <nav class="navbar">
+      <ul>
+        <li id="write-new-event"><button>make event</button></li>
+        <li id="filter-events"><button>filter</button></li>
+        <li id="search-events"><button>search</button></li>
+        <li id="log-in"><button>log-in</button></li>
+      </ul>
+      </ul>
+    </nav>
+  
+    <!-- Banner section -->
+    <div class="banner">
+      <h1>Welcome to GoHere</h1>
+      <img id="small-marker" src="./resources/images/map_marker.png" alt="">
+      <p>This is our project for UofTHacks X</p>
+      <button onclick=" window.open('https://github.com/johnchakkour/UofTHacksX-Exploration', '_blank')">Our GitHub page</button>
+    </div>
 
   <!-- Map section -->
   <div class="banner">
     <h1>This is where our map will be</h1>
-    <img id="small-marker" src="./resources/images/map_marker.png" alt="">
-    <p>This is our project for UofTHacks X</p>
-    <button>Our GitHub page</button>
   </div>
 
-  <!-- New event form -->
+  <!-- All forms -->
   <form id="new-event"></form>
   <form id="filter"></form>
   <form id="search"></form>
   <form id="log-in-form"></form>
+
+  
 </body>
 
 </html>
