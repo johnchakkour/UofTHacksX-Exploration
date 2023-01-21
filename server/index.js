@@ -1,18 +1,25 @@
-// Set up the express web server and encryption
-const express = require("express");
+"use strict";
 
+// Basic express setup:
+
+const PORT = 8080;
+const express = require("express");
+const bodyParser = require("body-parser");
 const app = express();
 
-app.use(express.urlencoded({ extended: false }));
-app.set("view engine", "ejs");
-const PORT = 8080; // default port 8080
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("public"));
 
-// Main page
-app.get("/", (req, res) => {
-  res.send('Hello');
-});
+const db = require("./lib/in-memory-db");
 
-// Start listening
+const DataHelpers = require("./lib/data-helpers.js")(db);
+
+require("./lib/date-adjust")();
+
+const eventsRoutes = require("./routes/events")(DataHelpers);
+
+app.use("/events", eventsRoutes);
+
 app.listen(PORT, () => {
-  console.log(`Example app listening on port ${PORT}!`);
+  console.log("Example app listening on port " + PORT);
 });
