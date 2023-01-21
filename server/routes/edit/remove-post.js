@@ -4,6 +4,6 @@
 const express = require('express');
 const appRoutes = express.Router();
 
-appRoutes.get("/", function(req, res) {
-  res.send('You cam to the main page');
+appRoutes.get("/edit", function(req, res) {
+  res.send('You came to remove/edit a post');
 });
