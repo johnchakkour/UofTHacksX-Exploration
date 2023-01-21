@@ -1,0 +1,18 @@
+// Set up the express web server and encryption
+const express = require("express");
+
+const app = express();
+
+app.use(express.urlencoded({ extended: false }));
+app.set("view engine", "ejs");
+const PORT = 8080; // default port 8080
+
+// Main page
+app.get("/", (req, res) => {
+  res.send('Hello');
+});
+
+// Start listening
+app.listen(PORT, () => {
+  console.log(`Example app listening on port ${PORT}!`);
+});
