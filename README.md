@@ -9,7 +9,7 @@ We also plan on having an option to generate a short description for an event fr
 
 This README file will be updated periodically.
 
-\*meaning @johnchakkour, @IrhaAli, and @DarrenPorciello.
+\*meaning @johnchakkour, @IrhaAli, @DarrenPorciello and @SophieLiu071117.
 
 
 ## Getting Started
