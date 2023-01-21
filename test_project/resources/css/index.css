@@ -1,3 +1,7 @@
+h1 {
+	font-family: 'Unbounded', cursive;
+}
+
 .navbar {
 	background-color: navajowhite;
 	position: fixed;
@@ -14,13 +18,7 @@
 
 .navbar li {
 	display: inline-block;
-	padding: 10px 30px;
-}
-
-.navbar li:hover {
-	color: navajowhite;
-	background-color: aqua;
-	transition: 0.3s ease;
+	padding: 5px 30px;
 }
 
 .navbar a {
@@ -37,7 +35,7 @@
 #small-marker {
 	height: 150px;
 	filter: drop-shadow(20px -20px 10px black);
-	padding: 40px 0;
+	padding: 50px 0;
 }
 
 #bla {
@@ -50,4 +48,26 @@
 
 #more-text {
 	color: darkslateblue;
+}
+
+button {
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 15px;
+  text-decoration: none;
+  box-shadow: 0px 3px;
+  font-size: 25px;
+  font-family: Courier;
+  background-color: antiquewhite;
+}
+ 
+button:hover {
+  cursor: pointer;
+}
+ 
+button:active {
+  margin-top: 5px;
+  color: mintcream;
+  box-shadow: 0px 0px;
+  background-color: mediumaquamarine;
 }
