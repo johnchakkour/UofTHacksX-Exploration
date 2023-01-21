@@ -14,8 +14,6 @@ const db = require("./lib/in-memory-db");
 
 const DataHelpers = require("./lib/data-helpers.js")(db);
 
-require("./lib/date-adjust")();
-
 const eventsRoutes = require("./routes/events")(DataHelpers);
 
 app.use("/events", eventsRoutes);
