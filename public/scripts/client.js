@@ -46,9 +46,10 @@ $(document).ready(function() {
 
   // When login form is submitted
   $('#new-event-form').submit(function() {
-    addToData($('#location').val(), $('#time').val(), $('#name').val(), $('#desc').val());
-    addMarkers(jsonData[jsonData.length - 1]);
-    // alert(`name: ${$('#name').val()} location: ${$('#location').val()} time: ${$('#time').val()} Desc: ${$('#desc').val()} category: ${$('#category').val()}`);
+    addToData($('#Longitude').val(), $('#Latitude').val(), $('#name').val(), $('#desc').val());
+    
+    alert(`name: ${$('#name').val()} Longitude: ${$('#Longitude').val()} Latitude: ${$('#Latitude').val()} Description: ${$('#Description').val()}`);defaultMapSetUp(jsonData)
+    //addMarkers(jsonData[jsonData.length - 1]);
   });
 
   // When search form is submitted
@@ -64,7 +65,28 @@ $(document).ready(function() {
   // Initialize the map
   let map = L.map('map');
 
-  function defaultMapSetUp() {
+  // Method 2 for adding pointers
+  let addMarkers = function(point) {
+    L.marker([point.LAT, point.LNG])
+      .addTo(map)
+      .bindPopup(`<h3> ${point.NAME}</h3><p>${point.DISCRIPTION}</p>`);
+  };
+
+  //Custom Markers Database
+  let jsonData = [
+    {
+      "LAT": 43.6629,
+      "LNG": -79.3904,
+      "NAME": "Party Number 1",
+      "DISCRIPTION": "Party at my House!"
+    },
+    {
+      "LAT": 43.6629,
+      "LNG": -79.3907,
+      "NAME": "Karaoke Night",
+      "DISCRIPTION": "Party at my House!"
+    }];
+  function defaultMapSetUp(jsonData) {
     map.setView([43.6629, -79.3903], 15);
     googleMap = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
       maxZoom: 20,
@@ -72,10 +94,11 @@ $(document).ready(function() {
     });
 
     googleMap.addTo(map);
+    jsonData.forEach(addMarkers);
   }
 
   if (!mapInitialized) {
-    defaultMapSetUp();
+    defaultMapSetUp(jsonData);
     mapInitialized = true;
   }
 
@@ -123,20 +146,6 @@ $(document).ready(function() {
   L.marker([43.66461, -79.374118]).addTo(map)
     .bindPopup(template_concert);
 
-  //Custom Markers Database
-  let jsonData = [
-    {
-      "LAT": 43.6629,
-      "LNG": -79.3904,
-      "NAME": "Party Number 1",
-      "DISCRIPTION": "Party at my House!"
-    },
-    {
-      "LAT": 43.6629,
-      "LNG": -79.3907,
-      "NAME": "Karaoke Night",
-      "DISCRIPTION": "Party at my House!"
-    }];
 
   // Adding to database
   function addToData(latitude, longitude, name, discription) {
@@ -149,15 +158,9 @@ $(document).ready(function() {
 
   }
 
-  // Method 2 for adding pointers
-  let addMarkers = function(point) {
-    L.marker([point.LAT, point.LNG])
-      .addTo(map)
-      .bindPopup(`<h3> ${point.NAME}</h3><p>${point.DISCRIPTION}</p>`);
-  };
 
   addToData(43.6627, -79.3907, "Concert", "Concert tonight BYOB");
 
-  jsonData.forEach(addMarkers);
+  //jsonData.forEach(addMarkers);
 });
 
