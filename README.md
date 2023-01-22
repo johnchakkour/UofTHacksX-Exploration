@@ -16,3 +16,8 @@ Our goal is to have the UI consist of embedded Google Maps (or a Google Maps clo
 
 - Express
 - Node 5.10.x or above
+
+## Features we would like to add
+- The navigation bar at the top is just a button on the right (like the github one) and when clicked on it shows all the options.
+- Make event has many more options to add
+- The pins are emojis representing the type of event
