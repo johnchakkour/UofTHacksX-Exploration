@@ -23,39 +23,29 @@ $(document).ready(function() {
 
   loadEvents();
 
-  // Deals with event form appearance/disappearance
+  // Deals with new event form appearance/disappearance
   $('#write-new-event').click(function() {
-    // format by row: optional h5 for any error message then textarea then submit button and character count
-    const form = $("<h5 id='errMess'></h5> <textarea name='text' id='event-details' placeholder='What are you thinking of planning?'></textarea><div><button type='submit' id='new-event-sub'>Event</button></div>");
-    $('#new-event').html(form);
+    $('#new-event').toggle();
   });
 
-
-
-  // Deals with event form appearance/disappearance
+  // Deals with filter form appearance/disappearance
   $('#filter-events').click(function() {
-    // format by row: optional h5 for any error message then textarea then submit button and character count
-    const form = $("<h5>Filter Event Pop up</h5>");
-    $('#filter').html(form);
+    $('#filter').toggle();
   });
 
-  // Deals with event form appearance/disappearance
+  // Deals with search form appearance/disappearance
   $('#search-events').click(function() {
-    // format by row: optional h5 for any error message then textarea then submit button and character count
-    const form = $("<h5>Search Event Pop up</h5>");
-    $('#search').html(form);
+    $('#search').toggle();
   });
 
-  // Deals with event form appearance/disappearance
-  $('#log-in').click(function() {
-    // format by row: optional h5 for any error message then textarea then submit button and character count
-    const form = $("<h5>Log in Event Pop up</h5>");
-    $('#log-in-form').html(form);
+  // Deals with ogin form appearance/disappearance
+  $('#log-in-button').click(function() {
+    $('#log-in-form').toggle();
   });
 
   // When login form is submitted
-  $('#new-event').submit(function() {
-    
+  $('#new-event-form').submit(function() {
+    alert($('#event-name').val());
   });
 });
 
