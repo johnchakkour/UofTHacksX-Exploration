@@ -1,13 +1,15 @@
-h1 {
-	font-family: 'Unbounded', cursive;
+html, body {
+	margin: 0;
+	padding: 0;
 }
 
 .navbar {
-	background-color: navajowhite;
 	position: fixed;
+	background: transparent;
 	top: 0;
 	width: 100%;
-	font-family: courier;
+	margin: 0;
+	padding: 0;
 	font-size: 18px;
 }
 
@@ -26,28 +28,21 @@ h1 {
 }
 
 .banner {
-	background-color: mediumaquamarine;
-	margin-top: 50px;
 	text-align: center;
-	padding: 50px 0;
+	padding-top: 1000px;
+	padding-bottom: 10px;
+	background: url("../images/google_maps.png");
+	background-size: contain;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
-#small-marker {
-	height: 150px;
-	filter: drop-shadow(20px -20px 10px black);
-	padding: 50px 0;
-}
-
-#bla {
-	color: white;
-	background-color: red;
-	padding: 10px 10px;
-	font-family: futura;
-	font-style: italic;
-}
-
-#more-text {
-	color: darkslateblue;
+.banner .btn-holder {
+	justify-content: flex-end;
+	display: flex;
 }
 
 button {
@@ -57,17 +52,54 @@ button {
   text-decoration: none;
   box-shadow: 0px 3px;
   font-size: 25px;
-  font-family: Courier;
-  background-color: antiquewhite;
-}
- 
-button:hover {
+  font-family: 'Unbounded', Courier;
+  background-color: seashell;
   cursor: pointer;
 }
- 
+
+button:hover {
+	margin-top: 5px;
+	border: 0px;
+}
+
+#make-event:hover {
+	color: midnightblue;
+	background-color: lightskyblue;
+}
+
+#filter:hover {
+	color: rgb(150, 100, 0);
+	background-color: rgb(255, 255, 100);
+}
+
+#search:hover {
+	color: darkred;
+	background-color: rgb(255, 150, 150);
+}
+
+#log-in:hover {
+	color: darkgreen;
+	background-color: lightgreen;
+}
+
 button:active {
-  margin-top: 5px;
-  color: mintcream;
+  cursor: pointer;
+  background-color: aliceblue;
   box-shadow: 0px 0px;
-  background-color: mediumaquamarine;
+}
+
+#github-logo {
+	border: 0;
+	border-radius: 100%;
+	background: transparent;
+	box-shadow: 0px 0px;
+	margin-top: 0;
+	transition: transform .4s ease-out;
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+}
+
+#github-logo:hover {
+	transform: rotate(360deg);
 }
