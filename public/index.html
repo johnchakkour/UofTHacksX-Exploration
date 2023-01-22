@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <!-- Meta Information -->
   <meta charset="utf-8">
@@ -17,14 +16,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Unbounded&display=swap" rel="stylesheet">
 
-  <!-- External font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap"
-    rel="stylesheet">
-
-
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/index.css" type="text/css" />
 
@@ -35,10 +26,11 @@
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js" defer></script>
+  <script type="text/javascript" src="/script/index.js" defer></script>
+
 </head>
 
 <body>
-
   <!-- Navbar section -->
   <nav class="navbar">
     <ul>
@@ -59,10 +51,34 @@
       page</button>
   </div>
 
+
   <!-- Map section -->
-  <div class="banner">
-    <h1>This is where our map will be</h1>
-  </div>
+
+  <!--Leaflet css-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+
+  <style>
+    body {
+      margin: 0;
+    }
+
+    #map {
+      height: 80vh;
+      width: 100vw;
+    }
+  </style>
+
+  <body>
+    <!--LeafLet Script-->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+    <script src="/scripts/index.js" defer></script>
+    <div id='map'></div>
+
+  </body>
+
 
   <!-- All forms -->
   <div class="content" id="new-event">
@@ -70,8 +86,8 @@
       ×
     </div>
     <form id="new-event-form">
-      <input type="text" id="event-name"/>
-      <input type="submit" value="Submit"/>
+      <input type="text" id="event-name" />
+      <input type="submit" value="Submit" />
     </form>
   </div>
 
@@ -98,8 +114,6 @@
     Hello
     <form id="log-in-form"></form>
   </div>
-
-
 
 </body>
 

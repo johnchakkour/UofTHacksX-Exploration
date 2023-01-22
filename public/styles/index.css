@@ -1,50 +1,50 @@
 h1 {
-	font-family: 'Unbounded', cursive;
+  font-family: 'Unbounded', cursive;
 }
 
 .navbar {
-	background-color: navajowhite;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	font-family: courier;
-	font-size: 18px;
+  background-color: navajowhite;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-family: courier;
+  font-size: 18px;
 }
 
 .navbar ul {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .navbar li {
-	display: inline-block;
-	padding: 5px 30px;
+  display: inline-block;
+  padding: 5px 30px;
 }
 
 
 .banner {
-	background-color: mediumaquamarine;
-	margin-top: 50px;
-	text-align: center;
-	padding: 50px 0;
+  background-color: mediumaquamarine;
+  margin-top: 50px;
+  text-align: center;
+  padding: 50px 0;
 }
 
 #small-marker {
-	height: 150px;
-	filter: drop-shadow(20px -20px 10px black);
-	padding: 50px 0;
+  height: 150px;
+  filter: drop-shadow(20px -20px 10px black);
+  padding: 50px 0;
 }
 
 #bla {
-	color: white;
-	background-color: red;
-	padding: 10px 10px;
-	font-family: futura;
-	font-style: italic;
+  color: white;
+  background-color: red;
+  padding: 10px 10px;
+  font-family: futura;
+  font-style: italic;
 }
 
 #more-text {
-	color: darkslateblue;
+  color: darkslateblue;
 }
 
 button {
@@ -57,11 +57,11 @@ button {
   font-family: Courier;
   background-color: antiquewhite;
 }
- 
+
 button:hover {
   cursor: pointer;
 }
- 
+
 button:active {
   margin-top: 5px;
   color: mintcream;
