@@ -2,61 +2,39 @@
 <html>
 
 <head>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GoHere</title>
+  <title>Wyd?</title>
   <link rel="stylesheet" type="text/css" href="./resources/css/index.css">
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Unbounded&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+
   <!-- Navbar section -->
   <nav class="navbar">
     <ul>
       <li><a href=""><button id="make-event">make event</button></a></li>
-      <li><a href=""><button>filter</button></a></li>
-      <li><a href=""><button>search</button></a></li>
-      <li><a href=""><button>log in</button></a></li>
+      <li><a href=""><button id="filter">filter</button></a></li>
+      <li><a href=""><button id="search">search</button></a></li>
+      <li><a href=""><button id="log-in">log in</button></a></li>
     </ul>
   </nav>
 
   <!-- Banner section -->
   <div class="banner">
-    <h1>Welcome to GoHere</h1>
-    <img class="small-marker" src="./resources/images/map_marker.png" alt="">
-    <p>This is our project for UofTHacks X</p>
     <!-- Opens the GitHub repo in a new tab-->
-    <button onclick=" window.open('https://github.com/johnchakkour/UofTHacksX-Exploration', '_blank')">Our GitHub page</button>
+    <div class="btn-holder">
+      <button id="github-logo" onclick=" window.open('https://github.com/johnchakkour/UofTHacksX-Exploration', '_blank')"><img src="./resources/images/github_logo.png" width="75" height="75" alt="buttonpng" border="0"/></button>
+    </div>
   </div>
 
-  <!-- Another section -->
-  <h1 id="bla">GoHere</h1>
-  <p id="more-text">More text more text</p>
-  <form action="">
-    <input type="text"/>
-    <input type="submit" value="Submit"/>
-  </form>
-  <div>
-    <ul>
-      <li>
-        <div></div><span>Even more text</span>
-      </li>
-      <li>
-        <div></div><span>And even more text</span>
-      </li>
-      <li>
-        <div></div><span>And even mooore text</span>
-      </li>
-      <li>
-        <div></div><span>And even mooooooore text</span>
-      </li>
-      <li>
-        <div></div><span>I'm just adding random text at this point</span>
-      </li>
-    </ul>
-  </div>
 </body>
+
 </html>
