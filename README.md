@@ -5,6 +5,9 @@ In line with this year's theme, "exploration", we have decided to make a website
 
 Our goal is to have the UI consist of embedded Google Maps (or a Google Maps clone), with markers placed by users advertising their events. The markers would contain information such as the name of the host, the location, and optional keywords or tags.
 
+## Final Product
+![Main Page](/images/main-page.png)
+
 ## Getting Started
 
 1. Clone your repository onto your local device.
