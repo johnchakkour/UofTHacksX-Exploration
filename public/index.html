@@ -54,76 +54,77 @@
     </ul>
   </nav>
 
-  <div id='map'></div>
   <!-- Banner section -->
   <div class="banner">
+    <div class="content" id="new-event">
+      <div onclick="$('#new-event').toggle()" class="close-btn">
+        ×
+      </div>
+      <form id="new-event-form" class="cm-processed-form">
+        <div class="form-group mb-2">
+          <label for="name">Event Name: </label>
+          <input class="form-control" type="text" name="name" id="name" style="width: 300px; margin: 1em" />
+          <label for="location">Location: </label>
+          <input class="form-control" type="text" name="location" id="location" style="width: 300px; margin: 1em" />
+          <label for="time">Time: </label>
+          <input class="form-control" type="text" name="time" id="time" style="width: 300px; margin: 1em" />
+          <label for="desc">Description: </label>
+          <input class="form-control" type="text" name="desc" id="desc" style="width: 300px; margin: 1em" />
+          <label for="cost">Cost: </label>
+          <input class="form-control" type="text" name="cost" id="cost" style="width: 300px; margin: 1em" />
+          <label for="category">Category: </label>
+          <input class="form-control" type="text" name="category" id="category" style="width: 300px; margin: 1em" />
+          <button type="submit" class="btn btn-primary">Add Event</button>
+        </div>
+      </form>
+    </div>
+  
+    <div class="content" id="filter">
+      <div onclick="$('#filter').toggle()" class="close-btn">
+        ×
+      </div>
+      Hello
+      <form id="filter-form"></form>
+    </div>
+  
+    <div class="content" id="search">
+      <div onclick="$('#search').toggle()" class="close-btn">
+        ×
+      </div>
+      <form id="search-form" class="cm-processed-form">
+        <div class="form-group mb-2">
+          <label for="search">Search Event:</label>
+          <input class="form-control" type="text" name="search" id="search-bar" style="width: 300px; margin: 1em" />
+          <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+      </form>
+    </div>
+  
+    <div class="content" id="log-in-form">
+      <div onclick="$('#log-in-form').toggle()" class="close-btn">
+        ×
+      </div>
+      <form id="login-form" class="cm-processed-form">
+        <div class="form-group mb-2">
+          <label for="email">Email</label>
+          <input class="form-control" type="text" name="email" id="email" style="width: 300px; margin: 1em" />
+          <label for="password">Password</label>
+          <input class="form-control" type="password" name="password" id="password" style="width: 300px; margin: 1em" />
+          <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+      </form>
+    </div>
+    <div id='map'></div>
     <!-- Opens the GitHub repo in a new tab-->
     <div class="btn-holder">
       <button id="github-logo"
         onclick=" window.open('https://github.com/johnchakkour/UofTHacksX-Exploration', '_blank')"><img
-          src="../github_logo.png" width="75" height="75" alt="buttonpng" border="0" /></button>
+          src="./github_logo.png" width="75" height="75" alt="buttonpng" border="0" /></button>
     </div>
   </div>
 
   <!-- All forms -->
-  <div class="content" id="new-event">
-    <div onclick="$('#new-event').toggle()" class="close-btn">
-      ×
-    </div>
-    <form id="new-event-form" class="cm-processed-form">
-      <div class="form-group mb-2">
-        <label for="name">Event Name: </label>
-        <input class="form-control" type="text" name="name" id="name" style="width: 300px; margin: 1em" />
-        <label for="location">Location: </label>
-        <input class="form-control" type="text" name="location" id="location" style="width: 300px; margin: 1em" />
-        <label for="time">Time: </label>
-        <input class="form-control" type="text" name="time" id="time" style="width: 300px; margin: 1em" />
-        <label for="desc">Description: </label>
-        <input class="form-control" type="text" name="desc" id="desc" style="width: 300px; margin: 1em" />
-        <label for="cost">Cost: </label>
-        <input class="form-control" type="text" name="cost" id="cost" style="width: 300px; margin: 1em" />
-        <label for="category">Category: </label>
-        <input class="form-control" type="text" name="category" id="category" style="width: 300px; margin: 1em" />
-        <button type="submit" class="btn btn-primary">Add Event</button>
-      </div>
-    </form>
-  </div>
 
-  <div class="content" id="filter">
-    <div onclick="$('#filter').toggle()" class="close-btn">
-      ×
-    </div>
-    Hello
-    <form id="filter-form"></form>
-  </div>
-
-  <div class="content" id="search">
-    <div onclick="$('#search').toggle()" class="close-btn">
-      ×
-    </div>
-    <form id="search-form" class="cm-processed-form">
-      <div class="form-group mb-2">
-        <label for="search">Search Event:</label>
-        <input class="form-control" type="text" name="search" id="search-bar" style="width: 300px; margin: 1em" />
-        <button type="submit" class="btn btn-primary">Search</button>
-      </div>
-    </form>
-  </div>
-
-  <div class="content" id="log-in-form">
-    <div onclick="$('#log-in-form').toggle()" class="close-btn">
-      ×
-    </div>
-    <form id="login-form" class="cm-processed-form">
-      <div class="form-group mb-2">
-        <label for="email">Email</label>
-        <input class="form-control" type="text" name="email" id="email" style="width: 300px; margin: 1em" />
-        <label for="password">Password</label>
-        <input class="form-control" type="password" name="password" id="password" style="width: 300px; margin: 1em" />
-        <button type="submit" class="btn btn-primary">Login</button>
-      </div>
-    </form>
-  </div>
 
 </body>
 
