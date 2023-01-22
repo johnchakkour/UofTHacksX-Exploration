@@ -31,31 +31,33 @@
   <!-- External JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js" defer></script>
 </head>
 
 <body>
-   
-    <!-- Navbar section -->
-    <nav class="navbar">
-      <ul>
-        <li id="write-new-event"><button>make event</button></li>
-        <li id="filter-events"><button>filter</button></li>
-        <li id="search-events"><button>search</button></li>
-        <li id="log-in"><button>log-in</button></li>
-      </ul>
-      </ul>
-    </nav>
-  
-    <!-- Banner section -->
-    <div class="banner">
-      <h1>Welcome to GoHere</h1>
-      <img id="small-marker" src="./resources/images/map_marker.png" alt="">
-      <p>This is our project for UofTHacks X</p>
-      <button onclick=" window.open('https://github.com/johnchakkour/UofTHacksX-Exploration', '_blank')">Our GitHub page</button>
-    </div>
+
+  <!-- Navbar section -->
+  <nav class="navbar">
+    <ul>
+      <li id="write-new-event"><button>make event</button></li>
+      <li id="filter-events"><button>filter</button></li>
+      <li id="search-events"><button>search</button></li>
+      <li id="log-in-button"><button>log-in</button></li>
+    </ul>
+    </ul>
+  </nav>
+
+  <!-- Banner section -->
+  <div class="banner">
+    <h1>Welcome to GoHere</h1>
+    <img id="small-marker" src="./resources/images/map_marker.png" alt="">
+    <p>This is our project for UofTHacks X</p>
+    <button onclick=" window.open('https://github.com/johnchakkour/UofTHacksX-Exploration', '_blank')">Our GitHub
+      page</button>
+  </div>
 
   <!-- Map section -->
   <div class="banner">
@@ -63,12 +65,42 @@
   </div>
 
   <!-- All forms -->
-  <form id="new-event"></form>
-  <form id="filter"></form>
-  <form id="search"></form>
-  <form id="log-in-form"></form>
+  <div class="content" id="new-event">
+    <div onclick="$('#new-event').toggle()" class="close-btn">
+      ×
+    </div>
+    <form id="new-event-form">
+      <input type="text" id="event-name"/>
+      <input type="submit" value="Submit"/>
+    </form>
+  </div>
 
-  
+  <div class="content" id="filter">
+    <div onclick="$('#filter').toggle()" class="close-btn">
+      ×
+    </div>
+    Hello
+    <form id="filter-form"></form>
+  </div>
+
+  <div class="content" id="search">
+    <div onclick="$('#search').toggle()" class="close-btn">
+      ×
+    </div>
+    Hello
+    <form id="search-form"></form>
+  </div>
+
+  <div class="content" id="log-in-form">
+    <div onclick="$('#log-in-form').toggle()" class="close-btn">
+      ×
+    </div>
+    Hello
+    <form id="log-in-form"></form>
+  </div>
+
+
+
 </body>
 
 </html>
